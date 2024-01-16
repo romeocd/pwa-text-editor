@@ -29,30 +29,17 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 // TODO: Implement asset caching
 //Cache CSS and JavaScript files
 registerRoute(
-  ({ request }) => request.destination === 'style' || request.destination === 'script',
+  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
   new StaleWhileRevalidate({
-    cacheName: 'static-resources',
-    plugins: [
-      new CacheableResponsePlugin({
-        statuses: [0, 200],
-      }),
-    ],
-  }),
-);
-
-// Cache images with a Cache First strategy
-registerRoute (
-  ({ request }) => request.destination === 'image',
-  new CacheFirst({
-    cacheName: 'image-cache',
+    cacheName: 'asset-cache',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
         maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-      }),
+        maxAgeSeconds: 30 * 24 * 60 * 60, 
+      })
     ],
-  }),
+  })
 );
