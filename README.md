@@ -26,8 +26,10 @@ To use the application:
 4. To test offline functionality, disable your internet connection and continue using the application.
 
 ## Screenshots
- `![manifest.json](/images/manifest.png)`
- `![service-worker](/images/service-worker.png)`
+![image](https://github.com/romeocd/pwa-text-editor/assets/142187750/c40aef98-3e04-41eb-92e0-18d28f4108a6)
+
+![image](https://github.com/romeocd/pwa-text-editor/assets/142187750/1b58c537-046b-4b7b-b9e6-fd759799cd5f)
+
 
 ## Contributing
 Please contact me at:
