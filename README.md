@@ -30,6 +30,8 @@ To use the application:
 
 ![image](https://github.com/romeocd/pwa-text-editor/assets/142187750/1b58c537-046b-4b7b-b9e6-fd759799cd5f)
 
+## Deployed Applicaton:
+https://pwa-text-editor-gkwv.onrender.com/
 
 ## Contributing
 Please contact me at:
